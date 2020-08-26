@@ -76,6 +76,9 @@ void App::onInit() {
     // Call setScene(shared_ptr<Scene>()) or setScene(MyScene::create()) to replace
     // the default scene here.
     
+
+    debugPrintf("target frame rate=%f hz\n", 1.0f / realTimeTargetDuration());
+
     showRenderingStats      = false;
 
     loadScene(
@@ -92,6 +95,9 @@ void App::onInit() {
     // Make the GUI after the scene is loaded because loading/rendering/simulation initialize
     // some variables that advanced GUIs may wish to reference with pointers.
     makeGUI();
+
+
+    
 
     // For higher-quality screenshots:
     // developerWindow->videoRecordDialog->setScreenShotFormat("PNG");
